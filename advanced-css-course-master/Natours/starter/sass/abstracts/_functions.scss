@@ -1,1 +1,7 @@
- 
+@function column-width($columns, $total-columns) {
+  $total-gutters: $total-columns - 1;
+  $one-col-width: calc((100% - #{$total-gutters} * #{$gutter-horizontal}) / #{$total-columns});
+  $containing-gutters: $columns - 1;
+
+  @return calc(#{$columns} * #{$one-col-width} + #{$containing-gutters} * #{$gutter-horizontal});
+} 
