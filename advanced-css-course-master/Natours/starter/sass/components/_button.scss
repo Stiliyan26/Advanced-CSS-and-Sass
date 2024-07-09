@@ -31,13 +31,13 @@
   }
 
   &--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
-
-    &::after {
-      background-color: $color-white;
-    }
+    @include btn-color($color-white, $color-grey-dark);
   }
+
+  &--green {
+    @include btn-color($color-primary, $color-white);
+  }
+
 
   &::after {
     content: "";
@@ -56,9 +56,10 @@
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
   }
-} 
+}
 
 .btn-text {
+
   &:link,
   &:visited {
     font-size: $default-font-size;
@@ -82,5 +83,3 @@
     transform: translateY(0);
   }
 }
-
-

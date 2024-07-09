@@ -15,9 +15,23 @@
 
  @mixin bg-image-overlay-gradient-rb($img) {
    background-size: cover;
-   background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)),
-      url($img);
+   background-image: linear-gradient(to right bottom,
+       rgba($color-primary-light, 0.8),
+       rgba($color-primary-dark, 0.8)),
+     url($img);
+ }
+
+ @mixin bgi-lg-diagonal($color-light, $color-dark, $opacity: .85) {
+   background-image: linear-gradient(to right bottom,
+       rgba($color-light, $opacity),
+       rgba($color-dark, $opacity));
+ }
+
+ @mixin btn-color($bg-color, $text-color: $color-grey-dark) {
+   background-color: $bg-color;
+   color: $text-color;
+
+   &::after {
+     background-color: $bg-color;
+   }
  }

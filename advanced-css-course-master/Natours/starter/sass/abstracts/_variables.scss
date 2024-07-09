@@ -16,6 +16,12 @@ $color-grey-dark: #777;
 $color-white: #fff;
 $color-black: #000; 
 
+$bg-colors: (
+  1: ($color-secondary-light, $color-secondary-dark),
+  2: ($color-primary-light, $color-primary-dark),
+  3: ($color-tertiary-light, $color-tertiary-dark)
+);
+
 //FONT
 $default-font-size: 1.6rem;
 

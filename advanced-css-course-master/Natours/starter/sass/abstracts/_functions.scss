@@ -4,4 +4,5 @@
   $containing-gutters: $columns - 1;
 
   @return calc(#{$columns} * #{$one-col-width} + #{$containing-gutters} * #{$gutter-horizontal});
-} 
+}
+

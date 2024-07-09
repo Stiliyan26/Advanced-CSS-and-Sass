@@ -61,6 +61,8 @@
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 
     &--1 {
       background-image: linear-gradient(to right bottom,
@@ -98,10 +100,11 @@
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 
-    &--1 {
-      background-image: linear-gradient(to right bottom,
-          rgba($color-secondary-light, .85),
-          rgba($color-secondary-dark, .85));
+    @for $i from 1 through length($bg-colors) {
+      &--#{$i} {
+        $colors: map-get($bg-colors, $i);
+        @include bgi-lg-diagonal(nth($colors, 1), nth($colors, 2));
+      }
     }
   }
 
