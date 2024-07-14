@@ -1,5 +1,5 @@
 .header {
-  @include bg-image-overlay-gradient-rb('../img/hero.jpg');
+  @include bg-image-overlay-gradient-rb('../img/hero-small.jpg');
   height: 95vh;
   background-position: top;
   position: relative;
@@ -10,6 +10,11 @@
 
   /* Right Arrow */
   /* clip-path: polygon(0 20%, 60% 20%, 60% 0, 100% 50%, 60% 100%, 60% 80%, 0 80%); */
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    @include bg-image-overlay-gradient-rb('../img/hero.jpg');
+  }
+
   @include respond(phone) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
